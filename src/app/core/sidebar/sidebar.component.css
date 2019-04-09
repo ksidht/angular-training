@@ -1,0 +1,52 @@
+.sidecard-wrapper, .sidenav-container {
+    width: 100%;
+    min-height: 800px;
+}
+
+.sidenav-container {
+    background:white;
+}
+
+.mat-card {
+    padding: 0;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    background: #D9DEE4;
+    color: #2A3F54;
+    margin-top:10px;
+}
+
+.mat-drawer-inner-container {
+    background: #2A3F54;
+}
+
+mat-sidenav-content {
+    background: white;
+    color: #2A3F54;
+}
+.header-section {
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;    
+    background: #D9DEE4;
+
+
+}
+
+.mat-list-item-content  {
+    padding:0 !important;
+}
+
+.header-content {
+    background: #D9DEE4;
+}
+
+.menu-toggle-icon {
+    min-height: 50px;
+}
+
+mat-nav-list {
+    padding-top:0;
+}

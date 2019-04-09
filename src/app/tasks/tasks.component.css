@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    
+}
+
+table th, table td {
+    color: #2A3f54;
+    background: white;
+    border-color: gainsboro;
+}
+
+mat-toolbar {
+    background: white;
+    color: #2a3f54;
+}
+
+.float-right {
+    float: right;
+}
+
+.action-container {
+    width:100%;
+}

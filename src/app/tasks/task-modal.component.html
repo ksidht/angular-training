@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Add Task <button class="float-right close-icon" mat-button mat-dialog-close><mat-icon >close</mat-icon></button></h2>
+<mat-dialog-content class="mat-typography">
+  <!-- <form class="example-form" [formGroup] ="taskForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Task</mat-label>
+      <input matInput placeholder="Task" formControlName = "task">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Owner</mat-label>
+      <mat-select formControlName="owner" required>
+      <mat-option *ngFor="let owner of owners"  [value]="owner.value">
+        {{owner.label}}
+      </mat-option>
+  </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" required>
+      <mat-option *ngFor="let st of status"  [value]="st.value">
+        {{st.label}}
+      </mat-option>
+  </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Start Date</mat-label>
+      <input matInput formControlName="startdate" [matDatepicker]="startdatepicker" placeholder="Start Date">
+      <mat-datepicker-toggle matSuffix [for]="startdatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #startdatepicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Due Date</mat-label>
+      <input matInput formControlName="duedate" [matDatepicker]="picker" placeholder="Due Date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Duration</mat-label>
+        <input formControlName="duration" matInput placeholder="Duration">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+          <mat-label>Priority</mat-label>  
+        <input formControlName="priority" matInput placeholder="Priority">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Created By</mat-label>
+            <input formControlName="createdby" matInput placeholder="Created By">
+          </mat-form-field>
+  </form> -->
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

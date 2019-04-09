@@ -1,0 +1,11 @@
+
+  <mat-nav-list>
+    <mat-list-item><img class="profile-img" src="assets/images/img.jpg"></mat-list-item>
+    <mat-list-item class="profile-menu">
+      <button mat-button [matMenuTriggerFor]="menu">John Doe<mat-icon>more_vert</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+    </mat-list-item>
+  </mat-nav-list>

@@ -1,0 +1,19 @@
+.profile-img {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+}
+
+.profile-menu {
+    background: #D9DEE4;
+    color: #2a3f54;
+}
+
+
+mat-nav-list {
+    display:flex;
+    flex-direction:row;
+    background: #D9DEE4;
+    margin-top: -12px;
+    padding: 0
+}

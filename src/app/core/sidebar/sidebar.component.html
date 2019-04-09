@@ -1,0 +1,34 @@
+<mat-card class="sidecard-wrapper">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #menu mode="side">
+     <mat-nav-list>
+       <mat-toolbar><mat-icon>face</mat-icon>CRUD Example </mat-toolbar> 
+       <mat-list-item><i class="material-icons">
+        dashboard
+        </i><a routerLink='/dashboard'>  Dashboard</a></mat-list-item>
+       <mat-list-item><i class="material-icons">
+        note_add
+        </i><a routerLink="/tasks">  Tasks</a></mat-list-item>
+       <mat-list-item><i class="material-icons">
+        motorcycle
+        </i><a routerLink="/milestones">  Milestones</a></mat-list-item>
+       <mat-list-item><i class="material-icons">
+        question_answer
+        </i><a routerLink="/issues">  Issues</a></mat-list-item>
+     </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="header-content">
+      <div class="menu-toggle-icon">
+          <mat-icon class="menu-toggle" (click)="menu.toggle()">
+              reorder
+            </mat-icon>
+      </div>
+      <div class="header-section">
+          <app-header></app-header>
+      </div>
+    </div>
+  <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</mat-card>
