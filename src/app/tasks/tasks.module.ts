@@ -16,6 +16,7 @@ import {
 import { TasksRoutingModule } from './tasks-routing.module';
 import { TasksComponent } from './tasks.component';
 import { TaskModalComponent } from './task-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TasksComponent, TaskModalComponent],
@@ -32,6 +33,7 @@ import { TaskModalComponent } from './task-modal.component';
   MatSelectModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  ReactiveFormsModule,
     TasksRoutingModule
   ]
 })

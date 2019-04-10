@@ -8,8 +8,8 @@ const ELEMENT_DATA: Tasks[] = [
     task: 'Created Analysis Task',
     owner: 'Akhilesh A',
     status: 'Open',
-    startdate: '05-30-2019',
-    duedate: '06-30-2019',
+    startdate: '2019-05-30',
+    duedate: '2019-06-30',
     duration: 30,
     priority: 'None',
     createdby: 'Akhilesh A',
@@ -153,8 +153,16 @@ export class TasksComponent implements OnInit {
   ngOnInit() {
   }
 
-  openTaskModal() {
-    const dialogRef = this.matdialog.open(TaskModalComponent);
+  openTaskModal(flag,element) {
+    let dialogRef;
+    if(flag ===false) {
+      dialogRef = this.matdialog.open(TaskModalComponent);
+    } else {
+      dialogRef = this.matdialog.open(TaskModalComponent, {
+        data: element
+      });
+    }
+    
 
   }
 }

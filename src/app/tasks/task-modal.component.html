@@ -1,9 +1,10 @@
 <h2 mat-dialog-title>Add Task <button class="float-right close-icon" mat-button mat-dialog-close><mat-icon >close</mat-icon></button></h2>
 <mat-dialog-content class="mat-typography">
-  <!-- <form class="example-form" [formGroup] ="taskForm">
+  <form class="example-form" [formGroup] ="taskForm">
     <mat-form-field class="example-full-width">
       <mat-label>Task</mat-label>
-      <input matInput placeholder="Task" formControlName = "task">
+      <input matInput placeholder="Task" formControlName = "task" required>
+      <mat-error>Task Required</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Owner</mat-label>
@@ -12,6 +13,7 @@
         {{owner.label}}
       </mat-option>
   </mat-select>
+  <mat-error>Owner Required</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Status</mat-label>
@@ -19,38 +21,45 @@
       <mat-option *ngFor="let st of status"  [value]="st.value">
         {{st.label}}
       </mat-option>
+      
   </mat-select>
+  <mat-error>Status Required</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Start Date</mat-label>
-      <input matInput formControlName="startdate" [matDatepicker]="startdatepicker" placeholder="Start Date">
+      <input matInput formControlName="startdate" [matDatepicker]="startdatepicker" placeholder="Start Date" required>
       <mat-datepicker-toggle matSuffix [for]="startdatepicker"></mat-datepicker-toggle>
       <mat-datepicker #startdatepicker></mat-datepicker>
+      <mat-error>StartDate Required</mat-error>
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
         <mat-label>Due Date</mat-label>
-      <input matInput formControlName="duedate" [matDatepicker]="picker" placeholder="Due Date">
+      <input matInput formControlName="duedate" [matDatepicker]="picker" placeholder="Due Date" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
+      <mat-error>DueDate Required</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Duration</mat-label>
-        <input formControlName="duration" matInput placeholder="Duration">
+        <input formControlName="duration" matInput placeholder="Duration" required>
+        <mat-error>Duration Required</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
           <mat-label>Priority</mat-label>  
-        <input formControlName="priority" matInput placeholder="Priority">
+        <input formControlName="priority" matInput placeholder="Priority" required>
+        <mat-error>Priority Required</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Created By</mat-label>
-            <input formControlName="createdby" matInput placeholder="Created By">
+            <input formControlName="createdby" matInput placeholder="Created By" required >
+            <mat-error>Createdby Required</mat-error>
           </mat-form-field>
-  </form> -->
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+  <button (click)="saveTask()" mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
 </mat-dialog-actions>
